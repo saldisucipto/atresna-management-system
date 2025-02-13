@@ -1,5 +1,18 @@
+<script>
+export default {};
+</script>
+
 <template>
-    <h1 class="bg-black">
-        How To Install Vue 3 in Laravel 10 : ZWebCourses :)
-    </h1>
+    <base-layout>
+        <div>
+            <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
+        </div>
+        <nav>
+            <RouterLink to="/">Go to Home</RouterLink>
+            <RouterLink to="/settings">Go to Settings Pages</RouterLink>
+        </nav>
+        <main>
+            <RouterView />
+        </main>
+    </base-layout>
 </template>
